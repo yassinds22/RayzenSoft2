@@ -35,59 +35,106 @@
     <link href="css/updatestyle.css" rel="stylesheet">
     <link href="css/last-style.css"rel="stylesheet">
 </head>
-    <style>
-        html, body {
-  max-width: 100vw;
+<style>
+    .carousel-inner{
+       
+    }
+
+@media (max-width: 576px) {
+  .carousel-inner img, .carousel-item img {
+    max-height: 220px;
+  }
+}
+
+/* ارتفاع الكاروسيل على الديسكتوب */
+
+
+/* ارتفاع الكاروسيل على الجوال */
+@media (max-width: 576px) {
+  .carousel-inner img, .carousel-item img {
+    height: 180px !important;
+    border-radius: 8px;
+  }
+}
+/* تحسين المساحات البيضاء */
+.container, .container-xxl {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+
+/* تحسين المساحات البيضاء */
+.container, .container-xxl {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Full width section styles */
+.full-width-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   overflow-x: hidden;
 }
 
-@media (max-width: 576px) {
-  .container,
-  .container-xxl,
-  .parent-cards,
-  .feature-row,
-  .row,
-  .mabutt,
-  .feature-item,
-  .custom-card {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    border-radius: 8px !important;
-    box-sizing: border-box;
-    width: 100% !important;
-    max-width: 100vw !important;
-  }
-  img, .carousel-inner img {
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-    display: block;
-  }
-  .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .col-lg-3, .col-md-6, .col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .carousel-caption {
-    padding: 8px 4px !important;
-  }
-  .custom-card {
-    min-width: 0 !important;
-  }
+.full-width-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
   .about-rayzensoft {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-}
 
-    </style>
+
+ 
+  
+  /* تحسينات الكاروسيل للموبايل */
+   .full-width-section {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(100vw - 20px) !important;
+  }
+  .full-width-section .carousel-item img {
+    height: 450px !important;
+  
+  }
+  
+  .full-width-section .carousel-control-prev,
+  .full-width-section .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+  }
+  
+  .full-width-section .carousel-control-prev-icon,
+  .full-width-section .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .full-width-section .carousel-indicators {
+    bottom: 10px;
+  }
+  
+  .full-width-section .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+     .full-width-section {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(100vw - 20px) !important;
+  }
+  .carousel-caption h3{
+    margin-right: 150px;
+  }
+
+</style>
 
 
 <body >
@@ -103,14 +150,17 @@
         <div class="container py-3">
             <div class="d-flex align-items-center">
              
-               
-                <div class="ms-auto  ">
-                    <a href="tel:+966508203385" style="text-decoration: none;"> <small class="sicosal-media ms-4" style="margin-right: 1px;"><i class="fa fa-phone-alt me-3" style="margin-left: 1px;"></i>+966508203385</small>  </a>
-                    <a href="tel:+966508203385" style="text-decoration: none;"><small class="sicosal-media ms-4" style="margin-right: 1px;"><i class="fa fa-phone-alt me-3" style="margin-left: 1px;"></i>+966508203385</small></a>
                 
-                </div>
+                <div class="ms-auto  ">
+                   
+                      <a href="tel:+966508203385" style="text-decoration: none;"> <small class="sicosal-media ms-4" style="margin-right: 1px;"><i class="fa fa-phone-alt me-3" style="margin-left: 1px;"></i>+966508203385</small>  </a>
+                    <a href="https://wa.me/+966554038382" style="text-decoration: none;"><small class="sicosal-media ms-4" style="margin-right: 3px;"><i class="fab fa-whatsapp me-3" style="margin-left: 5px;"></i>+966508203385</small></a>
+                
+                   
+                </div> 
             </div>
         </div>
+
     </div>
 
 
@@ -171,50 +221,53 @@
 
 
     <!-- Carousel Start -->
-    <div class="div-Carousel container-fluid px-0 mb-3">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/back2.jpg" alt="Image" width="1920px" height="600px">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-start">
-                                <div class="col-lg-7 text-start">
-                                    <p class="fs-4 text-white animated slideInRight" style="text-align: right;"> مرحبا بكم في <strong style="color: #f6c270;">رايزن سوفت</strong></p>
-                                    <h3 class="display-1 text-white mb-4 animated slideInRight" style="text-align: right;">ادارة عملياتك الحسابية بكل دقة</h1>
-                                    <!-- <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInRight">Explore More</a> -->
+  
+
+
+
+  <section  id="RayzenSoftlink" style="margin-left: 20px !important; margin-right: 2px !important; margin-top: 5px;" >
+        <div class="full-width-container ">
+            <div class="row g-0 feature-row" >
+
+                    <div class="col-md-6 col-lg-12 wow fadeIn" data-wow-delay="0.7s" >
+                        <div class="feature-item border h-100 p-3">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                               
+                                </ol>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="d-block w-100" src="img/back1.jpg" alt="رايزنسوفت - الحل المحاسبي المتكامل" height="500px">
+                                    <div class="carousel-caption">
+                                      <h3 style="margin-right: 170px !important;">رايزنسوفت</h3>
+                                      <p>الحل المحاسبي المتكامل لإدارة أعمالك بكفاءة عالية</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="img/back2.jpg " alt="نظام محاسبي ذكي" height="500px">
+                                    <div class="carousel-caption">
+                                      <h3 style="margin-right: 170px !important;">نظام محاسبي ذكي</h3>
+                                      <p >تقارير دقيقة وإدارة شاملة لجميع العمليات المالية</p>
+                                    </div>
+                                  </div>
+                                
                                 </div>
-                            </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/back1.jpg" alt="Image" width="1920px" height="600px">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-end">
-                                <div class="col-lg-7 text-end">
-                                    <p class="fs-4 text-white animated slideInLeft">مرحبا بكم في <strong style="color: #f6c270;">رايزن سوفت</strong></p>
-                                    <h3 class="fs-7 display-1 text-white mb-5 animated slideInLeft">واجهات المستخدم سهلة ومرنة</h1>
-                                    <!-- <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft">Explore More</a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
+    </section>
     <!-- Carousel End -->
 
 
@@ -319,34 +372,74 @@
                                 </ol>
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <img class="d-block w-100" src="img/1.jpg" alt="First slide">
+                                    <img class="d-block w-100" src="img/1.jpg" alt="الشاشة الرئيسية - لوحة التحكم">
+                                    <div class="carousel-caption">
+                                      <h4>الشاشة الرئيسية</h4>
+                                      <p>لوحة تحكم شاملة تعرض أهم المؤشرات المالية والإحصائيات</p>
+                                    </div>
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/2.jpg" alt="Second slide">
+                                    <img class="d-block w-100" src="img/2.jpg" alt="إدارة الحسابات">
+                                    <div class="carousel-caption">
+                                      <h4>إدارة الحسابات</h4>
+                                      <p>نظام محاسبي متكامل لإدارة جميع المعاملات المالية</p>
+                                    </div>
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/3.jpg" alt="Third slide">
+                                    <img class="d-block w-100" src="img/3.jpg" alt="إدارة المخزون">
+                                    <div class="carousel-caption">
+                                      <h4>إدارة المخزون</h4>
+                                      <p>تتبع دقيق للمخزون مع تقارير تفصيلية</p>
+                                    </div>
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/4.jpg" alt="Second slide">
+                                    <img class="d-block w-100" src="img/4.jpg" alt="فواتير البيع">
+                                    <div class="carousel-caption">
+                                      <h4>فواتير البيع</h4>
+                                      <p>إنشاء وإدارة فواتير البيع بسهولة ودقة</p>
+                                    </div>
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/5.jpg" alt="Third slide">
+                                    <img class="d-block w-100" src="img/5.jpg" alt="فواتير الشراء">
+                                    <div class="carousel-caption">
+                                      <h4>فواتير الشراء</h4>
+                                      <p>إدارة مشتريات الشركة وفواتير الموردين</p>
+                                    </div>
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/6.jpg" alt="Second slide">
+                                    <img class="d-block w-100" src="img/6.jpg" alt="التقارير المالية">
+                                    <div class="carousel-caption">
+                                      <h4>التقارير المالية</h4>
+                                      <p>تقارير شاملة ومفصلة عن الأداء المالي</p>
+                                    </div>
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/7.jpg" alt="Third slide">
+                                    <img class="d-block w-100" src="img/7.jpg" alt="إدارة العملاء">
+                                    <div class="carousel-caption">
+                                      <h4>إدارة العملاء</h4>
+                                      <p>قاعدة بيانات شاملة للعملاء مع سجل المعاملات</p>
+                                    </div>
                                   </div>
                                    <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/8.jpg" alt="Third slide">
+                                    <img class="d-block w-100" src="img/8.jpg" alt="إدارة الموردين">
+                                    <div class="carousel-caption">
+                                      <h4>إدارة الموردين</h4>
+                                      <p>تتبع الموردين والمشتريات بسهولة</p>
+                                    </div>
                                   </div>
                                    <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/9.jpg" alt="Third slide">
+                                    <img class="d-block w-100" src="img/9.jpg" alt="إعدادات النظام">
+                                    <div class="carousel-caption">
+                                      <h4>إعدادات النظام</h4>
+                                      <p>تخصيص النظام حسب احتياجات شركتك</p>
+                                    </div>
                                   </div>
                                    <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/10.jpg" alt="Third slide">
+                                    <img class="d-block w-100" src="img/10.jpg" alt="الأمان والصلاحيات">
+                                    <div class="carousel-caption">
+                                      <h4>الأمان والصلاحيات</h4>
+                                      <p>نظام أمان متقدم مع إدارة الصلاحيات</p>
+                                    </div>
                                   </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
